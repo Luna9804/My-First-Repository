@@ -1,10 +1,24 @@
 import "./styles.css";
 
 export default function App() {
+  function displayPerson(firstname, lastname) {
+    return (
+      <tr>
+        <td> {firstname}</td>
+        <td> {lastname}</td>
+      </tr>
+    );
+  }
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <h2>Year: 2022 Highschool: P-TECH</h2>
+      <h1>Roster</h1>
+      <table>
+        {displayPerson("Matt", "Wojo")}
+        {displayPerson("Chinaza", "Onwukanjo")}
+        {displayPerson("Claudia", "Luna-Marcelino")}
+        {displayPerson("Alex", "Sanchez")}
+        {displayPerson("Herber", "Cruz")}
+      </table>
     </div>
   );
 }
